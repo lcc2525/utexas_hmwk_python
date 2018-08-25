@@ -30,3 +30,8 @@ run = "y"
 while run == "y":
     print("Hi!")
     run = input("To run again. Enter 'y'")
+
+	
+
+for x in pieList
+	print("(" + i + ")" + x)
