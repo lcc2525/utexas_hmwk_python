@@ -1,0 +1,15 @@
+curl -s https://$GITHUB_AT:@api.github.com/orgs/project2group5aus/repos?per_page=200
+https://stedolan.github.io/jq/
+jq .[].ssh_url
+
+xargs -n 1 git clone
+
+$ curl -s https://$GITHUB_AT:@api.github.com/orgs/project2group5aus/repos? | jq .[].ssh_url | xargs -n 1 git clone
+
+https://medium.com/@kevinsimper/how-to-clone-all-repositories-in-a-github-organization-8ccc6c4bd9df
+
+https://github.com/    project2group5aus
+
+
+
+curl -s https://api.github.com/orgs/project2group5aus/repos?per_page=200 | jq -r '.[].clone_url' | xargs -n 1 git clone

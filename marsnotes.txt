@@ -1,0 +1,7 @@
+div class="description"
+a href=
+
+<a href="/search/map/Mars/Viking/cerberus_enhanced" 
+class="itemLink product-item">
+<h3>Cerberus Hemisphere Enhanced</h3></a>
+browser.click_link_by_partial_href('my_link')
