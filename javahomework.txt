@@ -61,3 +61,6 @@ data.forEach((weatherReport) => {
     cell.text(value);
   });
 });
+
+
+
