@@ -1,53 +1,18 @@
-// from data.js
-var tableData = data;
-var tbody = d3.select("tbody");
+//from data.js
+// var tableData = data;
+// var select = document.getElementById("datetime"); 
+var array = ["78610","78613","78617","78641","78652","78653","78660","78664","78681","78701","78702","78703","78704","78705","78712","78717","78719","78721","78722","78723","78724","78725","78726","78727","78728","78729","78730","78731","78732","78733","78734","78735","78736","78737","78738","78739","78741","78742","78744","78745","78746","78747","78748","78749","78750","78751","78752","78753","78754","78756","78757","78758","78759"]; 
 
-// select the submit button
-var submit = d3.select("#filter-btn");
-
-// find element for appending date
-var myDiv = document.getElementById("dates");
+var myDiv = document.getElementById("mySelect");
 //Create and append select list
 var selectList = document.createElement("value");
 // selectList.id = "mySelect";
 myDiv.appendChild(selectList);
 
-// filter for unique dates to enter list of
-filtereddate = tableData.datetime;
-var filtereddate = tableData.map(date => date.datetime);
-var unique = filtereddate.filter( onlyUnique );
-console.log(unique);
-
-// enter option into html
-for (var i = 0; i < unique.length; i++) {
-  var option = document.createElement("option");
-  option.value = unique[i];
-  option.text = unique[i];
-  selectList.appendChild(option);
+//Create and append the options
+for (var i = 0; i < array.length; i++) {
+    var option = document.createElement("option");
+    option.value = array[i];
+    option.text = array[i];
+    selectList.appendChild(option);
 };
-
-// call the function to trigger on the click button
-submit.on('click', function() {
-  d3.event.preventDefault(); 
-  var inputElement = d3.select("#datetime");    
-  var inputValue = inputElement.property("value");
-
-
-//  filter by inputted data
-  var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
-  
-//  output filtered data to website
-filteredData.forEach((sighting) => {
-  var row = tbody.append("tr");
-  Object.entries(sighting).forEach(([key, value]) => {
-  var cell = tbody.append("td");
-  cell.text(value);
-    });
-  });
-});
-
-
-// function to find unique elements in array
-function onlyUnique(value, index, self) {
-  return self.indexOf(value) === index;
-}
