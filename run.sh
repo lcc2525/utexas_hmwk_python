@@ -1,0 +1,1 @@
+FLASK_APP=bellybut/app.py flask run
