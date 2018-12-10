@@ -1,1 +1,0 @@
-touchweb: gunicorn bellybut.app:app

@@ -1,0 +1,1 @@
+FLASK_APP=JAVA2/app.py flask run

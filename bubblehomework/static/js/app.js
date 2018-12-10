@@ -129,7 +129,9 @@ function buildCharts(sample) {
     var layout2 = {
       height: 600,
       width: 900
+    Plotly.newPlot("bubble", data2, layout2);
     };
+    
     // set up gauge charts in plotly
     // not yet 
 
@@ -149,7 +151,7 @@ function buildCharts(sample) {
     };
   
     Plotly.newPlot("pie", data, layout, {responsive: true});
-    Plotly.newPlot("bubble", data2, layout2);
+    
 // end handle success pie chart  
   };
 

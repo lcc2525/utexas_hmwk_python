@@ -1,0 +1,92 @@
+// zoom level zoom level of zoom number, id mapbox.pirates
+var myMap = L.map("map", {
+  center: [28.52, -122.67],
+  zoom: 13
+});
+// create map alternative way
+// Create an initial map object
+// Set the longitude, latitude, and the starting zoom level
+var myMap = L.map("map").setView([45.52, -122.67], 13);
+
+
+// Adding a tile layer (the background map image) to our map
+// We use the addTo method to add objects to our map
+L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+  attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+  maxZoom: 18,
+  id: "mapbox.streets",
+  accessToken: API_KEY
+}).addTo(myMap);
+
+// Create a new marker
+// Pass in some initial options, and then add it to the map using the addTo method
+var marker = L.marker([45.52, -122.67], {
+  draggable: true,
+  title: "My First Marker"
+}).addTo(myMap);
+
+// Binding a pop-up to our marker
+marker.bindPopup("Hello There!");
+
+L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+  attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+  maxZoom: 18,
+  id: "mapbox.streets",
+  accessToken: API_KEY
+}).addTo(myMap);
+
+
+// Loop through the cities array and create one marker for each city, bind a popup containing its name and population add it to the map
+for (var i = 0; i < cities.length; i++) {
+  var city = cities[i];
+  L.marker(city.location)
+    .bindPopup("<h1>" + city.name + "</h1> <hr> <h3>Population " + city.population + "</h3>")
+    .addTo(myMap);
+
+// circle
+// // Create a circle and pass in some initial options
+// L.circle([45.52, -122.69], {
+//   color: "green",
+//   fillColor: "green",
+//   fillOpacity: 0.75,
+//   radius: 500
+// }).addTo(myMap);
+
+// polygon
+// // Create a Polygon and pass in some initial options
+// L.polygon([
+//   [45.54, -122.68],
+//   [45.55, -122.68],
+//   [45.55, -122.66]
+// ], {
+//   color: "red",
+//   fillColor: "yellow",
+//   fillOpacity: 0.75
+// }).addTo(myMap);
+
+// polyline
+// Coordinates for each point to be used in the polyline
+var line = [
+  [45.51, -122.68],
+  [45.50, -122.60],
+  [45.48, -122.70],
+  [45.54, -122.75]
+];
+
+// Create a polyline using the line coordinates and pass in some initial options
+L.polyline(line, {
+  color: "red"
+}).addTo(myMap);
+
+
+// Loop through the cities array and create one marker for each city object
+for (var i = 0; i < cities.length; i++) {
+  L.circle(cities[i].location, {
+    fillOpacity: 0.75,
+    color: "white",
+    fillColor: "purple",
+    // Setting our circle's radius equal to the output of our markerSize function
+    // This will make our marker's size proportionate to its population
+    radius: markerSize(cities[i].population)
+  }).bindPopup("<h1>" + cities[i].name + "</h1> <hr> <h3>Population: " + cities[i].population + "</h3>").addTo(myMap);
+}
