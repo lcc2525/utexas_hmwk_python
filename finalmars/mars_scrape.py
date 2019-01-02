@@ -61,7 +61,7 @@ def scrape():
     
     # df.head()
     html_table = df.to_html()
-    html_table.replace('\n', '')
+    # html_table.replace('\n', '')
     #   html_table
 
     # setup dictionary with hemisphere urls (website (https://astrogeology.usgs.gov/) down using google)
