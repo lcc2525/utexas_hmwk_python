@@ -1,0 +1,22 @@
+
+
+SELECT category_id, name, SUM(payment.amout) AS total_gross
+FROM category
+LEFT JOIN category ON category.category_id = film_category.category_id
+LEFT JOIN film_category ON film_category.film_id = inventory.film_id
+LEFT JOIN inventory ON inventory.inventory_id = rental.inventory_id
+LEFT JOIN rental ON rental.rental_id = payment.rental_id
+GROUP BY category.name
+ORDER BY total_gross DESC;
+
+
+
+
+
+
+FROM film
+INNER JOIN inventory ON inventory.film_id = film.film_id
+LEFT JOIN rental ON inventory.inventory_id = rental.inventory_id
+LEFT JOIN payment ON rental.rental_id = payment.rental_id
+GROUP BY film.title
+ORDER BY total_rentals DESC;

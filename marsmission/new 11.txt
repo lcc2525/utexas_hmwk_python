@@ -1,0 +1,5 @@
+plt.scatter(model.predict(X_train), model.predict(X_train)-y_train, c="blue", label="Training")
+plt.scatter(model.predict(X_test), model.predict(X_test) - y_test, c="orange", label="Testing Data")
+plt.legend()
+plt.hlines(y=0, xmin=y.min(), xmax=y.max())
+plt.title("Residual Plot")

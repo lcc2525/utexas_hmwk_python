@@ -1,0 +1,112 @@
+				NuSTAR Stares at the Sun			  </h1>
+</header>
+<figure class="lede">
+<a href="/spaceimages/images/largesize/PIA19821_hires.jpg"><img alt="Flaring, active regions of our sun are highlighted in this image combining observations from several telescopes. 
+During the observations, microflares went off, which are smaller versions of the larger flares that also erupt from the sun's surface." class="main_image" 
+src="/spaceimages/images/largesize/PIA19821_hires.jpg" title="Flaring, active regions of our sun are highlighted in this image combining observations from several telescopes. During the observations, 
+microflares went off, which are smaller versions of the larger flares that also erupt from the sun's surface."/></a>
+</figure>
+<div class="clearfix" id="primary_column">
+<div class="wysiwyg_content">
+<p>Flaring, active regions of our sun are highlighted in this image combining observations from several telescopes. High-energy X-rays from NASA's Nuclear Spectroscopic 
+Telescope Array (NuSTAR) are shown in blue; low-energy X-rays from Japan's Hinode spacecraft are green; and extreme ultraviolet light from NASA's Solar Dynamics Observatory (SDO) is yellow and red. 
+</p><p>All three telescopes captured their solar images around the same time on April 29, 2015. The NuSTAR image is a mosaic made from combining smaller images. </p>
+<p>The active regions across the sun's surface contain material heated to several millions of degrees. The blue-white areas showing the NuSTAR data pinpoint the most energetic spots. During the observations, microflares went off, which are smaller versions of the larger flares that also erupt from the sun's surface. The microflares rapidly release energy and heat the material in the active regions.</p><p>NuSTAR typically stares deeper into the cosmos to observe X-rays from supernovas, black holes and other extreme objects. But it can also look safely at the sun and capture images of its high-energy X-rays with more sensitivity than before. Scientists plan to continue to study the sun with NuSTAR to learn more about microflares, as well as hypothesized nanoflares, which are even smaller.</p><p>In this image, the NuSTAR data shows X-rays with energies between 2 and 6 kiloelectron volts; the Hinode data, which is from the X-ray Telescope instrument, has energies of 0.2 to 2.4 kiloelectron volts; and the Solar Dynamics Observatory data, taken using the Atmospheric Imaging Assembly instrument, shows extreme ultraviolet light with wavelengths of 171 and 193 Angstroms.</p><p>Note the green Hinode image frame edge does not extend as far as the SDO ultraviolet image, resulting in the green portion of the image being truncated on the right and left sides.</p><p>NuSTAR is a Small Explorer mission led by the California Institute of Technology in Pasadena and managed by NASA's Jet Propulsion Laboratory, also in Pasadena, for NASA's Science Mission Directorate in Washington. The spacecraft was built by Orbital Sciences Corporation, Dulles, Virginia. Its instrument was built by a consortium including Caltech; JPL; the University of California, Berkeley; Columbia University, New York; NASA's Goddard Space Flight Center, Greenbelt, Maryland; the Danish Technical University in Denmark; Lawrence Livermore National Laboratory, Livermore, California; ATK Aerospace Systems, Goleta, California, and with support from the Italian Space Agency (ASI) Science Data Center.</p><p>NuSTAR's mission operations center is at UC Berkeley, with the ASI providing its equatorial ground station located at Malindi, Kenya. The mission's outreach program is based at Sonoma State University, Rohnert Park, California. NASA's Explorer Program is managed by Goddard. JPL is managed by Caltech for NASA.</p><p>For more information, visit <a href="http://www.nasa.gov/nustar" target="new">http://www.nasa.gov/nustar</a> and <a href="http://www.nustar.caltech.edu/" 
+target="new">http://www.nustar.caltech.edu/</a>.			  </p></div>
+
+
+
+https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA17896
+
+ <section class='centered_text clearfix main_feature primary_media_feature single'>
+		<div class='carousel_container'>
+		  <div class='carousel_items'>
+			<article alt='NASA&#039;s Orbiting Carbon Observatory (OCO)-2 (Artist Concept)' class='carousel_item' 
+			style="background-image: url('/spaceimages/images/wallpaper/PIA17896-1920x1200.jpg');">
+			  <div class='default floating_text_area ms-layer'>
+				<h2 class='category_title'>
+				  
+				</h2>
+				<h2 class='brand_title'>
+				  FEATURED IMAGE
+				</h2>
+				<h1 class='media_feature_title'>
+				  NASA's Orbiting Carbon Observatory (OCO)-2 (Artist Concept)				</h1>
+				<div class='description'>
+				  
+				</div>
+				
+				
+		https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA14627		
+	</h2>
+				<h1 class='media_feature_title'>
+				  Vesta Sizes Up				</h1>
+				<div class='description'>
+				  
+				</div>
+				<footer>
+				  <a class='button fancybox' data-description="Vesta is the largest asteroid visited by a spacecraft. 
+				  It is currently being observed by NASA&#039;s Dawn spacecraft, which has entered orbit around Vesta." 
+				  data-fancybox-group='images' data-fancybox-href='/spaceimages/images/mediumsize/PIA14316_ip.jpg' 
+				  data-link='/spaceimages/details.php?id=PIA14316' data-title='Vesta Sizes Up' id='full_image'>
+					FULL IMAGE
+				  </a>
+				</footer>
+			  </div>
+			  <div class='gradient_container_top'></div>
+			  <div class='gradient_container_bottom'></div>
+			</article>
+		  </div>
+		</div>
+	  </section>
+	  <section class='filter_bar module'>
+		<div class='grid_layout'>
+		  <header>
+		  
+		  
+		  
+<div class='carousel_items'>
+			<article alt='NASA Radar Maps the Winter Pace of Iceland&#039;s Glaciers' class='carousel_item' 
+			style="background-image: url('/spaceimages/images/wallpaper/PIA17924-1920x1200.jpg');">
+			  <div class='default floating_text_area ms-layer'>
+				<h2 class='category_title'>
+				  
+				</h2>
+				<h2 class='brand_title'>
+				  FEATURED IMAGE
+				</h2>
+				<h1 class='media_feature_title'>
+				  NASA Radar Maps the Winter Pace of Iceland's Glaciers				</h1>
+				<div class='description'>
+				
+				
+				
+				
+<article alt="Crab Nebula, as Seen by Herschel and Hubble" class="carousel_item" style="background-image: url('/spaceimages/images/wallpaper/PIA17563-1920x1200.jpg');">
+<div class="default floating_text_area ms-layer">
+<h2 class="category_title">
+</h2>
+<h2 class="brand_title">
+				  FEATURED IMAGE
+				</h2>
+<h1 class="media_feature_title">
+				  Crab Nebula, as Seen by Herschel and Hubble				</h1>
+<div class="description">
+</div>
+<footer>
+<a class="button fancybox" data-description="This image shows a composite view of the Crab nebula, an iconic supernova remnant in our Milky Way galaxy, as viewed by the Herschel Space Observatory and the Hubble Space Telescope." data-fancybox-group="images" data-fancybox-href="/spaceimages/images/mediumsize/PIA17563_ip.jpg" data-link="/spaceimages/details.php?id=PIA17563" data-title="Crab Nebula, as Seen by Herschel and Hubble" id="full_image">
+					FULL IMAGE
+				  </a>
+</footer>
+</div>
+<div class="gradient_container_top"></div>
+<div class="gradient_container_bottom"></div>
+</article>
+
+
+https://www.jpl.nasa.gov/
+spaceimages/images/largesize/PIA17896_hires.jpg
+
+javascript:;
+
+<a title="Display actual size" class="fancybox-expand" href="javascript:;" style="display: block;"></a>

@@ -1,0 +1,31 @@
+Create a decision tree for:
+	Where should I move in Austin?
+	
+	Do you have kids?
+		What is important? 
+			national rank
+			merit scholors
+			test scores
+			sports
+			college admissions/ ivy state
+			distance from school
+			
+	Will you rent or buy?
+		Buy
+			what is your price range?
+			ammenities
+			size?
+			Type of house? two story condo, etch
+		Rent
+			same questions
+	
+	Multicultural importance?
+	
+	Ratio churches to population
+	
+	Restuarants to grocery stores 
+	
+	Single ratio, liquir liscense, movie theaters, etc... 
+	
+	you should live in this area, zip1, zip2, zip3 
+	

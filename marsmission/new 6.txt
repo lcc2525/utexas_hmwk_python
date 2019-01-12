@@ -1,0 +1,80 @@
+# Generate some fake data to test with
+def gendata(loc=0):
+    population = stats.norm.rvs(size=1000, random_state=42)
+    sample = stats.norm.rvs(loc=loc, size=200, random_state=42)
+
+    # Scatter Plot of Data
+    plt.subplot(2, 1, 1)
+    plt.scatter(range(len(population)), population, label="population")
+    plt.scatter(range(len(sample)), sample, label="sample")
+    plt.legend()
+
+    # Histogram Plot of Data
+    plt.subplot(2, 1, 2)
+    plt.hist(population, 20, density=True, alpha=0.7, label="population")
+    plt.hist(sample, 20, density=True, alpha=0.7, label="sample")
+    plt.axvline(population.mean(), color='k', linestyle='dashed', linewidth=1)
+    plt.axvline(sample.mean(), color='k', linestyle='dashed', linewidth=1)
+    plt.legend()  
+    
+    return population, sample
+	
+	
+# Create a boxplot to compare means
+df.boxplot("mosq", by="treatment", figsize=(20, 10))
+
+# Extract individual groups
+group1 = df[df["treatment"] == 1]["mosq"]
+group2 = df[df["treatment"] == 2]["mosq"]
+group3 = df[df["treatment"] == 3]["mosq"]
+group4 = df[df["treatment"] == 4]["mosq"]
+group5 = df[df["treatment"] == 5]["mosq"]
+
+
+# Perform the ANOVA
+stats.f_oneway(group1, group2, group3, group4, group5)
+
+# compare date see if there is a relationship between one or more data sets 
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+from statsmodels.stats.multicomp import MultiComparison
+mc = MultiComparison(df["mosq"], df["treatment"])
+result = mc.tukeyhsd()
+ 
+print(result)
+print(mc.groupsunique)
+
+
+var li_items = d3.select("ul")
+				.selectAll("li")
+				.data(arr)
+#  update
+// First, update existing elements
+d3.select("ul")
+    .selectAll("li")
+    .data(arr)
+    .text(function(d) {
+      return d;
+    });
+# create new elements
+#  li_items.text(fucntion(d){
+d3.select("ul")
+    .selectAll("li")
+    .data(arr)
+    .enter()
+    .append("li")
+    .text(function(d) {
+      return d;
+    });
+	
+# removing item
+var arr = [50, 55];
+d3.select("ul")
+    .selectAll("li")
+    .data(arr)
+    .exit()
+    .remove();
+	
+
+
+
+

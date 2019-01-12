@@ -1,0 +1,227 @@
+---
+title: "tibbles"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load dependency and sample data set
+```{r}
+library(tidyverse)
+data(diamonds, package='ggplot2')
+```
+
+### Select rows 1 through 7
+```{r}
+slice(diamonds, 1:7)
+```
+
+### Calculate the number of rows in the tibble
+```{r}
+nrow(diamonds)
+```
+
+### Select row 3
+```{r}
+slice(diamonds, 3)
+```
+
+### Select rows 1 and 7
+```{r}
+slice(diamonds, c(1,7))
+```
+
+### Select columns. First argument is the data set
+```{r}
+select(diamonds, carat, price)
+```
+
+### Filter data
+```{r}
+filter(diamonds, cut=='Ideal')
+```
+
+### Filter data by multiple criteria
+```{r}
+filter(diamonds, (cut=='Ideal' & price > 500))
+```
+
+### Operate over a column, temporarily add a new column
+```{r}
+total_volume <- mutate(diamonds, x * y * z)
+total_volume
+```
+### Name the new column, save the results to another tibble
+```{r}
+# In R, variables can contain periods
+total.volume2 <- mutate(diamonds, total.volume=(x*y*z))
+total.volume2
+```
+
+### Display the mean of a column
+```{r}
+summarize(diamonds, mean(price))
+```
+
+### Group diamonds by cut
+```{r}
+cut <- group_by(diamonds, cut)
+summarize(cut, mean(price), sum(price))
+```
+
+### A summary, grouped by cut, displaying average price and count.
+```{r}
+summarize(cut, avg=mean(price),number=n())
+```
+
+### Group by multiple columns
+```{r}
+cut2 <- group_by(diamonds, cut, color)
+cut2_summary <- summarize(cut2, mean(price))
+cut2_summary
+```
+
+### Count the number of diamonds by cut
+```{r}
+count(diamonds, cut)
+```
+---
+title: "Intro to GG Plot"
+output: html_notebook
+---
+
+Install and import libraries
+```{r}
+library(tidyverse)
+library(tibble) # for dataframes
+library(ggplot2) # for plotting
+library(lubridate) # for dates
+library(dplyr) # for data manipulation
+```
+
+```{r}
+data <-
+  read_csv("../Resources/data.csv")
+```
+
+```{r}
+data$days_seen <- dmy(data$last_seen) - dmy(data$start_date)
+data$days_seen <- as.numeric(data$days_seen, unit="days")
+```
+
+All ggplots start with the ggplot function. 
+
+aes - stands for aesthetics. These are the elements of the plot that depend on data
+
+geom_point - represents the type of shapes to use when making a plot. Another example would be geo_line
+
+```{r}
+ggplot(data) +
+    aes(x = days_seen, y = level) +
+    geom_point()
+```
+
+Adding Color
+```{r}
+ggplot(data) +
+    aes(x = days_seen, y = level, color = gender) +
+    geom_point()
+    #geom_point(alpha=0.2)
+```
+
+Grid Plotting with 'facet_grid'
+```{r}
+ggplot(data) +
+    aes(x = days_seen, y = level, color = gender) +
+    geom_point(alpha = 0.2) +
+    facet_grid(~ age_group)
+```
+
+How long do people play for? Putting data into charts and histograms 
+```{r}
+data$days_seen_group = cut(data$days_seen, breaks = c(-1, 0, 5, 10, 100, 500))
+
+ggplot(data) +
+    #aes(x = days_seen) +
+    aes(x = days_seen_group) +
+    geom_bar()
+```
+
+To divide each bar by Gender
+```{r}
+data %>% filter(gender !='UNKNOWN') %>% 
+    ggplot() + 
+        aes(x = days_seen_group, fill = gender) + 
+        geom_bar()
+```
+
+
+Looking at the age_group
+```{r}
+data %>% filter(gender !='UNKNOWN') %>% 
+    ggplot() + 
+        aes(x = days_seen_group, fill = age_group) + 
+        geom_bar()
+		---
+title: "HeatMap with GG Plot"
+output: html_notebook
+---
+
+Install and import libraries
+```{r}
+library(tidyverse)
+library(tibble) # for dataframes
+library(ggplot2) # for plotting
+library(lubridate) # for dates
+library(dplyr) # for data manipulation
+```
+
+```{r}
+data <- read_csv("../Resources/data.csv")
+```
+
+Heat plot
+```{r}
+plot_data <- data %>%
+    filter(last_seen < today() - days(7)) %>%
+    filter(gender != 'UNKNOWN') %>%
+    filter(age_group != 'UNKNOWN') %>%
+    group_by(gender, age_group) %>%
+    summarise(average_level = mean(level)) %>%
+    ungroup()
+```
+
+Now let's create a heat plot
+```{r}
+ggplot(plot_data) +
+    aes(y = gender, x = age_group, fill = average_level) +
+    geom_raster()
+```
+
+Make the plot look nicer
+install.packages('RColorBrewer')
+```{r}
+library(RColorBrewer)
+```
+
+Label each square by average level, but round to 1 decimal first
+```{r}
+plot_data$label <- plot_data$average_level %>% round(1) %>% as.character
+```
+
+```{r}
+ggplot(plot_data) +
+    aes(y = gender, x = age_group, fill = average_level, label = label) +
+    geom_raster() +
+    geom_text(colour = 'white', size = 8) +
+    scale_fill_distiller(name = 'Average\nFinal\nLevel', type = 'div', palette = 3) +
+    xlab('\nAge Group') +
+    ylab('Gender') + 
+    theme_bw()
+```
+
+		
+		
+```
