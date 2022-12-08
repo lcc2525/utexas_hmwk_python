@@ -12,4 +12,4 @@ pytz==2018.5
 six==1.11.0
 SQLAlchemy==1.2.10
 Werkzeug==0.14.1
-certifi==2018.4.16
+certifi==2022.12.7
